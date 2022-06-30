@@ -1,0 +1,29 @@
+{
+  "name": "cypress-configuration-example",
+  "version": "0.1.1",
+  "private": true,
+  "scripts": {
+    "cy:open": "cypress open"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.16",
+    "@babel/eslint-parser": "^7.12.16",
+    "@badeball/cypress-cucumber-preprocessor": "^11.0.0",
+    "@cucumber/cucumber": "^8.3.0",
+	"@cypress/webpack-preprocessor": "^5.12.0",
+    "cypress": "10.1.0",
+	"webpack": "^5.0.0"
+  },
+ 
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "stepDefinitions": [
+	  "[filepath]/**/*.{js,ts}",
+	  "[filepath].{js,ts}",
+      "cypress/e2e/common/**/*.{js,ts}",
+      "cypress/e2e/features/**/*.{js,ts}"
+    ]
+  }
+}
